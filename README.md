@@ -15,9 +15,11 @@ NIMUpload是一款用于浏览器端点播上传的软件开发工具包，提�
 - normal版直接引入相应js即可(依赖外部jQuery以及md5，需提前引入)：
 
 	```html
+	<script type="text/javascript" src="path/to/uploader-normal-with-dependency.js"></script>
+	<!-- 或者 -->
 	<script type="text/javascript" src="path/to/jquery.js"></script>
 	<script type="text/javascript" src="path/to/md5.js"></script>
-	<script type="text/javascript" src="path/to/upload.js"></script>
+	<script type="text/javascript" src="path/to/uploader-normal-no-dependency.js"></script>
 	```
 
 - npm package版本，通过如下指令即可完成安装:
