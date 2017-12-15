@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "md5": "^2.2.1",
-    "nimupload": "^1.0.2",
+    "nimupload": "^1.0.4",
     "superagent": "^3.8.2"
   }
 }

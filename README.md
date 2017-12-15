@@ -13,9 +13,11 @@ NIMUpload是一款用于浏览器端点播上传的软件开发工具包，提�
 一共有normal版和npm package版本。
 
 - normal版直接引入相应js即可(依赖外部jQuery以及md5，需提前引入)：
+	- uploader-normal-with-dependency-dist.js：主要是将本SDK代码与外部依赖 *md5* 和 *superagent* 打包至一个js中，用户直接引入一个script即可使用。
+	- uploader-normal-no-dependency.js：仅仅包含本SDK源码，用户要想实现上传功能，需额外引入本SDK依赖 *jquery* 以及 *md5*。
 
 	```html
-	<script type="text/javascript" src="path/to/uploader-normal-with-dependency.js"></script>
+	<script type="text/javascript" src="path/to/uploader-normal-with-dependency-dist.js"></script>
 	<!-- 或者 -->
 	<script type="text/javascript" src="path/to/jquery.js"></script>
 	<script type="text/javascript" src="path/to/md5.js"></script>
@@ -23,13 +25,18 @@ NIMUpload是一款用于浏览器端点播上传的软件开发工具包，提�
 	```
 
 - npm package版本，通过如下指令即可完成安装:
+	- 安装依赖
 
 	```
-	//安装依赖
 	$ npm i md5 superagent
-	// 安装NIMUpload
+	```
+
+	- 安装NIMUpload
+
+	```
 	$ npm i nimupload
 	```
+
 
   两个版本的源文件位于项目根目录 **src** 文件夹下。
 
@@ -49,7 +56,7 @@ NIMUpload是一款用于浏览器端点播上传的软件开发工具包，提�
 ```
 
 ```js
-var Uploader = require('nimupload')//仅仅npm package需要引入
+var Uploader = require('nimupload')//仅npm package需要引入
 var uploader = Uploader({
   'AppKey': '2f2a7935c3a5412a9a31be60924927f6',							// required
   'CheckSum': 'e3e847f6a0d7c8d9a78c43a2bbe6d1d91db83acd',		// required
@@ -99,7 +106,7 @@ $ npm run dev
 $ npm run build
 ```
 
-dev模式在浏览器中打开 `http://localhost:12345` 即可访问，deploy则需要将生成的dist目录下的文件拷贝到任意静态服务器上即可运行(如果想要在浏览器中直接引入运行，只需修改webpack配置把多入口分开打包注释，即可将本SDK以及对应依赖一起打包)。
+dev模式在浏览器中打开 `http://localhost:12345` 即可访问，deploy则需要将生成的dist目录下的文件拷贝到任意静态服务器上即可运行(如果想将业务代码与当前SDK一起打包，只需修改webpack配置把多入口分开打包注释即可)。
 
 ## Testing
 

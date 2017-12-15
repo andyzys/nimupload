@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     index: './index.js',
-    vendor: ['md5', 'superagent']
+    vendor: ['md5', 'superagent', 'nimupload']
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -54,5 +54,3 @@ module.exports = {
      extensions: ['.js', '.json', '.coffee']
   }
 }
-
-
