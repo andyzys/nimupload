@@ -88,8 +88,8 @@ uploader.on('progress', function(file) {
 uploader.on('finished', function(file) {
   console.log('onFinished：' + file.fileName);
 });
-uploader.on('error', function() {
-  console.log('出错了');
+uploader.on('error', function(errObj) {
+  console.log(errObj);
 });
 ```
 
