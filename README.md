@@ -57,7 +57,7 @@ NIMUpload是一款用于浏览器端点播上传的软件开发工具包，提�
 
 ```js
 var Uploader = require('nimupload')//仅npm package需要引入
-var uploader = Uploader({
+var uploader = new Uploader({
   'AppKey': '2f2a7935c3a5412a9a31be60924927f6',							// required
   'CheckSum': 'e3e847f6a0d7c8d9a78c43a2bbe6d1d91db83acd',		// required
   'CurTime': 1512629135,						// required
