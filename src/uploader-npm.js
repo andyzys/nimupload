@@ -351,7 +351,7 @@ Uploader.prototype.removeFile = function(file) {
       options.fileList.splice(index, 1)
       // 上传中文件继续上传
       if (fileObj.status === 1) {
-        options.upload(index)
+        this.upload(index)
       }
       return false
     }
