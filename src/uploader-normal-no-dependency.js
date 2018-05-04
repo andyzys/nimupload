@@ -351,6 +351,7 @@
    * @return {void}
    */
   Uploader.prototype.removeFile = function(file) {
+    let self = this
     let options = this._.options
     $.each(options.fileList, function(i, v) {
       if (v.fileKey === file.fileKey) {
@@ -363,7 +364,7 @@
         options.fileList.splice(i, 1)
         // 上传中文件继续上传
         if (v.status === 1) {
-          options.upload(i)
+            self.upload(i)
         }
         return false
       }
