@@ -2,10 +2,11 @@
 var Uploader = require('nimupload')
 
 var uploader = Uploader({
-  'AppKey': '2f2a7935c3a5412a9a31be60924927f6',
-  'CheckSum': 'e3e847f6a0d7c8d9a78c43a2bbe6d1d91db83acd',
-  'CurTime': 1512629135,
-  'Nonce': 1,
+  // 将后台生成的appkey等信息填写至此处
+  'AppKey': '',
+  'CheckSum': '',
+  'CurTime': ,
+  'Nonce': ,
   // onSelectFile: function(fileObj) {
   //   console.log('selected' + fileObj);
   // },
