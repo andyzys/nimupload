@@ -410,7 +410,7 @@
         localStorage.setItem(trunkData.fileKey + '_progress', curFile.progress)
         options.onProgress(curFile)
       } else {
-        options.onError({errCode: 501, errMsg: '浏览器不支持进度事件'})
+        options.onError({errCode: 501, errMsg: '获取进度失败'})
       }
     }
 
